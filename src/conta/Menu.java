@@ -2,16 +2,18 @@ package conta;
 
 import java.util.Scanner;
 import conta.model.Conta;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
 
 public class Menu { 
 	
 	public static void main(String[] args) {
-		Conta c1 = new Conta(123456, 0001, 1, "Maria das Neves", 500f);
-		c1.visualizar();
-		c1.sacar(300f);
-		c1.visualizar();
-		c1.depositar(1000f);
-		c1.visualizar();
+		
+		ContaCorrente cc2 = new ContaCorrente(9687, 0001, 1, "João", 500f, 30f);
+		cc2.visualizar();
+		
+		ContaPoupanca cp1 = new ContaPoupanca(2, 123, 2, "Maria dos Santos", 100000.0f, 15);
+		cp1.visualizar();		
 		
 		Scanner leia = new Scanner(System.in);
 		
